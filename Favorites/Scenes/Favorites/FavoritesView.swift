@@ -7,12 +7,20 @@
 
 import SwiftUI
 
-struct FavoritesView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+// MARK: - Favorites View
+public struct FavoritesView: View {
+    // MARK: Properties
+    
+    // MARK: Public Initializer
+    public init() {}
+    
+    // MARK: Body
+    public var body: some View {
+        Text("Hello, World!")
     }
 }
 
+// MARK: Favorites View Previews
 struct FavoritesView_Previews: PreviewProvider {
     static var previews: some View {
         FavoritesView()

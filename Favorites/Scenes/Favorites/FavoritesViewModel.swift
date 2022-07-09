@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - Favorites View Model
 class FavoritesViewModel: ObservableObject {
     
 }
