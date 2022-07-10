@@ -16,8 +16,15 @@ public struct FavoritesView: View {
     
     // MARK: Body
     public var body: some View {
-        Text("Hello, World!")
-    }
+//        NavigationView {
+            Image(systemName: "house")
+            
+            Spacer()
+            
+            Text("Movie Description")
+        }
+//        .navigationTitle("Favorite Movies")
+//    }
 }
 
 // MARK: Favorites View Previews
