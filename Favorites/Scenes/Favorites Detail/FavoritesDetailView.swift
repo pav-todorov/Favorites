@@ -27,7 +27,8 @@ struct FavoritesDetailView: View {
                     }
                 }
 
-            }
+            } //: List
+            .navigationTitle("Favorites")
         }
     }
 }
