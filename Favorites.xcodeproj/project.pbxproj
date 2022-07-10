@@ -119,11 +119,11 @@
 		E942C8E328795623008F6D68 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
-				E9EE419D287B503900D89135 /* Resources */,
 				E942C8FE28795663008F6D68 /* Scenes */,
-				E942C8E428795623008F6D68 /* Favorites.h */,
 				E9D56026287AEBCE006DE4C0 /* Helpers */,
+				E9EE419D287B503900D89135 /* Resources */,
 				E942C8E528795623008F6D68 /* Favorites.docc */,
+				E942C8E428795623008F6D68 /* Favorites.h */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
