@@ -11,6 +11,8 @@ import Shared_Models
 // MARK: - Favorites View
 public struct FavoritesView: View {
     // MARK: Properties
+    private typealias LocStrings = LocalizedStrings.Modules.Favorites
+    
     @FetchRequest(sortDescriptors: [SortDescriptor(\.title, order: .reverse)])
     private var favoriteMovieSearch: FetchedResults<Movie>
     
@@ -56,9 +58,9 @@ public struct FavoritesView: View {
                     }
                 }
             } //: List
-            .navigationTitle("Favorites")
+            .navigationTitle(Text(LocStrings.modules_favorites_navigation_title, bundle: Bundle(identifier: "com.movies.Favorites")))
         } //: NavigationView
-        .searchable(text: query, prompt: "Search by title")
+        .searchable(text: query, prompt: Text(LocStrings.modules_favorites_search_bar_prompt, bundle: Bundle(identifier: "com.movies.Favorites")))
     }
 }
 
