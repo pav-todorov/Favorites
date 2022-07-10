@@ -6,30 +6,26 @@
 //
 
 import SwiftUI
+import Shared_Models
 
+// MARK: - Favorites Detail View
 struct FavoritesDetailView: View {
-    @State var array: [Int] = []
+    // MARK: Properties
+    var movieModel: Movie
     
     var body: some View {
-        NavigationView {
-            List {
-                NavigationLink {
-                    FavoritesDetailView()
-                } label: {
-                    HStack {
-                        Image(systemName: "house")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50, height: 50)
-                        
-                        Text("Favorite Movie")
-                            .font(.system(size: 18))
+                ScrollView {
+                    AsyncImage(url: URL(string: "\(Keys.baseImageURL)\(movieModel.posterPath ?? "")")) { image in
+                        image.resizable()
+                    } placeholder: {
+                        ProgressView()
                     }
-                }
+                    .frame(width: 250, height: 280)
 
-            } //: List
-            .navigationTitle("Favorites")
-        }
+                    Text(movieModel.overview ?? "")
+                        .padding()
+                } //: ScrollView
+            .navigationTitle(movieModel.title ?? "")
     }
 }
 
